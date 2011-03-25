@@ -1,4 +1,4 @@
-(defproject Rheo_docs "1.0.0-SNAPSHOT"
+(defproject ryulogy "1.0.0-SNAPSHOT"
   :description "documentation system"
   :dependencies [[org.clojure/clojure "1.2.0"]
                  [org.clojure/clojure-contrib "1.2.0"]
@@ -20,5 +20,5 @@
   :web-content "public"
   ;; The servlet used by Tomcat
   ;;:aot [clj-rheo.servlet]
-  :ring {:handler Rheo_docs.core/app}
+  :ring {:handler ryulogy.core/app}
             )
