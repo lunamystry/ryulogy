@@ -11,20 +11,20 @@
                      (text-field :name "CoolKid")))))
 
 (defn fetch-doc-content [file-name]
-  ; Description: Reads file from the documentation folder
-  ;   with name = filename.rst and returns it as a string
-  ; Leonard's worry: This means it will be restricted to one 
-  ;   format of text, in this case text 
+  " Description: Reads file from the documentation folder
+     with name = filename.rst and returns it as a string
+   Leonard's worry: This means it will be restricted to one 
+     format of text, in this case text" 
   (try
     (slurp (str "public/docs/" file-name ".rst"))
     (catch Exception e (prn "in catch"))
     (finally (prn "in finally"))))
 
-(defn serve-cms-content [content-name]
-  ; Description: generates html from data returned by the 
-  ;     fetch-doc-content function
-  ; Leonard's worry: Is this now coupled to fetch-doc-content?
-  ; TODO: What if its content is not found?
+(defn serve-cms-content  
+  " Description: generates html from data returned by the 
+       fetch-doc-content function
+    Leonard's worry: Is this now coupled to fetch-doc-content?"
+  [content-name]
   (html [:div 
          [:h1 content-name]
          [:p (fetch-doc-content content-name)]]))
