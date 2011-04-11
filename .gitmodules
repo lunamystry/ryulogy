@@ -1,0 +1,3 @@
+[submodule "ryulogy.wiki"]
+	path = ryulogy.wiki
+	url = git@github.com:lunamystry/ryulogy.wiki.git
